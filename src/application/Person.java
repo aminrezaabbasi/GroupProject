@@ -34,9 +34,9 @@ public abstract class Person {
 	/**
 	 * Gets a list of the persons interests.
 	 * 
-	 * @return interests ArrayList
+	 * @return rated interests ArrayList
 	 */
-	public abstract ArrayList<Interest> getInterests();
+	public abstract ArrayList<RatedInterest> getInterests();
 	
 	/**
 	 * Gets the age of the gift recipient.
