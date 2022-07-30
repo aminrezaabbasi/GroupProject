@@ -17,7 +17,7 @@ public class Main extends Application {
 			VBox root = loader.load(new FileInputStream("src/application/GroupProjectFxml.fxml"));
 			Scene scene = new Scene(root,400,400);
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("The Group Project");
+			primaryStage.setTitle("Gift Recommender");
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
