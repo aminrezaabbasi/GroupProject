@@ -23,10 +23,12 @@ public abstract class Person {
 	public Person(int age, double maxPrice, String gender) {
 		this.age = age;
 		this.maxPrice = maxPrice;
-		if (gender.equalsIgnoreCase("F") || gender.equalsIgnoreCase("female") || gender.equalsIgnoreCase("for her")) 
-			this.gender = 'F';
-		else if (gender.equalsIgnoreCase("M") || gender.equalsIgnoreCase("male") || gender.equalsIgnoreCase("for him")) 
-			this.gender = 'M';
+		if (gender != null) {
+			if (gender.equalsIgnoreCase("F") || gender.equalsIgnoreCase("female") || gender.equalsIgnoreCase("for her")) 
+				this.gender = 'F';
+			else if (gender.equalsIgnoreCase("M") || gender.equalsIgnoreCase("male") || gender.equalsIgnoreCase("for him")) 
+				this.gender = 'M';
+		}
 	}
 	
 	/**
