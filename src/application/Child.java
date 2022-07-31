@@ -27,8 +27,10 @@ public class Child extends Person {
 		interestList.add(new RatedInterest("Dinosaurs"));
 		interestList.add(new RatedInterest("Animals"));
 		interestList.add(new RatedInterest("Art"));
+		interestList.add(new RatedInterest("Creativity"));
 		interestList.add(new RatedInterest("Building"));
 		interestList.add(new RatedInterest("Trucks"));
+		interestList.add(new RatedInterest("Music/listening"));
 	}
 	
 	/**
