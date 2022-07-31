@@ -136,6 +136,7 @@ public class Gift {
 
 	/**
 	 * Returns the youngest age a person can be to be recommended this gift
+	 * 
 	 * @return the minAge
 	 */
 	public int getMinAge() {
@@ -144,9 +145,28 @@ public class Gift {
 
 	/**
 	 * Returns the oldest age a person can be to be recommended this gift
+	 * 
 	 * @return the maxAge
 	 */
 	public int getMaxAge() {
 		return maxAge;
+	}
+	
+	/**
+	 * Returns the gift price.
+	 * 
+	 * @return price
+	 */
+	public int getPrice() {
+		return price;
+	}
+	
+	/**
+	 * Returns the intended gender of the gift recipient ('F' = female, 'M' = male, 'O' = other).
+	 * 
+	 * @return gift gender
+	 */
+	public char getGender() {
+		return gender;
 	}
 }
