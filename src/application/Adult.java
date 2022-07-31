@@ -29,7 +29,7 @@ public class Adult extends Person {
 		interestList.add(new RatedInterest("Creativity"));
 		interestList.add(new RatedInterest("Clothing"));
 		interestList.add(new RatedInterest("Beauty and perfume/cologne"));
-		interestList.add(new RatedInterest("Reading"));
+		interestList.add(new RatedInterest("Reading and writing"));
 	}
 	
 	/**
