@@ -1,4 +1,3 @@
-
 	package application;
 
 	import java.io.FileInputStream;
@@ -19,7 +18,7 @@
 
 	public class GiftRecommenderController {
 		
-		Stage applicationStage;
+		//Stage applicationStage;
 		
 		private Stage primaryStage;
 		private Scene scene;
@@ -51,7 +50,7 @@
 	    	String maxPriceInput = maxPriceTextField.getText();
 	    	System.out.println(maxPriceInput);
 	    	
-	    	Parent root = FXMLLoader.load(getClass().getResource("secondPage.fxml"));
+	    	Parent root = FXMLLoader.load(getClass().getResource("Scene2.fxml"));
 	    	primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    	scene = new Scene(root);
 	    	primaryStage.setScene(scene);
@@ -64,6 +63,3 @@
 	    	
 	    }
 	    }
-	    	
-
-
