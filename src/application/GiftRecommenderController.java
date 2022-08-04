@@ -50,16 +50,14 @@
 	    	String maxPriceInput = maxPriceTextField.getText();
 	    	System.out.println(maxPriceInput);
 	    	
-	    	Parent root = FXMLLoader.load(getClass().getResource("Scene2.fxml"));
+	    	Parent root = FXMLLoader.load(getClass().getResource("newScene2.fxml"));
 	    	primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    	scene = new Scene(root);
 	    	primaryStage.setScene(scene);
 	    	primaryStage.show();
 	    	
+	     }
 	    	// I used this YouTube video for implementing
 	    	// How can I use 2 FXML file for changing the scene.
-	    	//https://www.youtube.com/watch?v=hcM-R-YOKkQ&t=319s
-	    	
-	    	
-	    }
-	    }
+	    	//https://www.youtube.com/watch?v=hcM-R-YOKkQ&t=319s	
+	   }
