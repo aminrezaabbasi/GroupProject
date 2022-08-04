@@ -23,6 +23,7 @@
 		private Stage primaryStage;
 		private Scene scene;
 		private Parent root;
+		private Parent root2;
 
 	    @FXML
 	    private ChoiceBox<String> genderChoiceBox;
@@ -50,7 +51,7 @@
 	    	String maxPriceInput = maxPriceTextField.getText();
 	    	System.out.println(maxPriceInput);
 	    	
-	    	Parent root = FXMLLoader.load(getClass().getResource("newScene2.fxml"));
+	    	Parent root = FXMLLoader.load(getClass().getResource("newscene2neww.fxml"));
 	    	primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    	scene = new Scene(root);
 	    	primaryStage.setScene(scene);
@@ -59,5 +60,21 @@
 	     }
 	    	// I used this YouTube video for implementing
 	    	// How can I use 2 FXML file for changing the scene.
-	    	//https://www.youtube.com/watch?v=hcM-R-YOKkQ&t=319s	
-	   }
+	    	//https://www.youtube.com/watch?v=hcM-R-YOKkQ&t=319s
+	    
+	    @FXML 
+	    public void nextStep2(ActionEvent event2) throws IOException {
+	    	
+	    	
+	    	Parent root2 = FXMLLoader.load(getClass().getResource("scene3.fxml"));
+	    	primaryStage = (Stage)((Node)event2.getSource()).getScene().getWindow();
+	    	scene = new Scene(root2);
+	    	primaryStage.setScene(scene);
+	    	primaryStage.show();
+	    	
+	     
+	    	
+	    	
+	    }
+	    
+	 }
