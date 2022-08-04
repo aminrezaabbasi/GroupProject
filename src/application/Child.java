@@ -18,7 +18,7 @@ public class Child extends Person {
 	 * @param maxPrice the maximum price the gift sender wants to spend
 	 * @param gender the gender of the gift recipient
 	 */
-	public Child(int age, double maxPrice, String gender) {
+	public Child(int age, int maxPrice, String gender) {
 		super(age, maxPrice, gender);
 		interestList = new ArrayList<RatedInterest>();
 		interestList.add(new RatedInterest("Lego"));
