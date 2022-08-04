@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public abstract class Person {
 	private int age;
-	private double maxPrice;
+	private int maxPrice;
 	private char gender;
 	
 	/**
@@ -20,7 +20,7 @@ public abstract class Person {
 	 * @param maxPrice the maximum price the gift sender wants to spend
 	 * @param gender the gender of the gift recipient
 	 */
-	public Person(int age, double maxPrice, String gender) {
+	public Person(int age, int maxPrice, String gender) {
 		this.age = age;
 		this.maxPrice = maxPrice;
 		if (gender != null) {
@@ -28,6 +28,8 @@ public abstract class Person {
 				this.gender = 'F';
 			else if (gender.equalsIgnoreCase("M") || gender.equalsIgnoreCase("male") || gender.equalsIgnoreCase("for him")) 
 				this.gender = 'M';
+			else
+				this.gender = 'O';
 		}
 	}
 	
@@ -59,7 +61,7 @@ public abstract class Person {
 	/**
 	 * Gets the gender of the person. Returns 'F' for female and 'M' for male, null if gender is unspecified.
 	 * 
-	 * @return gender of the person ('F' = female; 'M' = male; null if unspecified)
+	 * @return gender of the person ('F' = female; 'M' = male; 'O' = other / non-binary / prefer not to disclose)
 	 */
 	public char getGender() {
 		return gender;
