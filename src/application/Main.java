@@ -13,12 +13,11 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception{
 		
-		Parent root = FXMLLoader.load(getClass().getResource("scene1.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("newscene1.fxml"));
 		Scene scene = new Scene(root, 400, 400);
 		primaryStage.setTitle("Gift Recommender");
 		primaryStage.setScene(scene);
 		primaryStage.show();
-
 	}
 	public static void main(String[] args) {
 		launch(args);

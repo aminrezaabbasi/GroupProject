@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="64.0" layoutY="35.0" prefHeight="27.0" prefWidth="482.0" text="Based on their interests, our recommended gift is:" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold" size="21.0" />
+         </font>
+      </Label>
+      <TreeView layoutX="144.0" layoutY="144.0" prefHeight="101.0" prefWidth="290.0" />
+      <Label fx:id="giftLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="160.0" layoutY="181.0" prefHeight="27.0" prefWidth="264.0" text="Label" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="314.0" prefHeight="27.0" prefWidth="371.0" text="    we wish you were satisfied with the gift :)">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="354.0" prefHeight="27.0" prefWidth="451.0" text="If you are looking for another gift, press the button below">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="173.0" layoutY="423.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="235.0" text="Next Gift" />
+   </children>
+</AnchorPane>
