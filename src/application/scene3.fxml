@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -14,7 +15,7 @@
          </font>
       </Label>
       <TreeView layoutX="144.0" layoutY="144.0" prefHeight="101.0" prefWidth="290.0" />
-      <Label fx:id="giftLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="159.0" layoutY="169.0" prefHeight="51.0" prefWidth="264.0" text="Label" textAlignment="CENTER">
+      <Label fx:id="giftLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="159.0" layoutY="169.0" prefHeight="51.0" prefWidth="264.0" text="Label" textAlignment="CENTER" textFill="#1f424dd4">
          <font>
             <Font name="Times New Roman" size="16.0" />
          </font>
