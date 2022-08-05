@@ -13,7 +13,9 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception{
 		
-		Parent root = FXMLLoader.load(getClass().getResource("newscene1.fxml"));
+		FXMLLoader loader = new FXMLLoader();
+		Parent root = loader.load(new FileInputStream("src/application/newscene1.fxml"));
+		GiftRecommenderController controller = (GiftRecommenderController)loader.getController();
 		Scene scene = new Scene(root, 400, 400);
 		primaryStage.setTitle("Gift Recommender");
 		primaryStage.setScene(scene);

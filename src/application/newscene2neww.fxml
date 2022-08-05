@@ -6,33 +6,33 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GiftRecommenderController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GiftRecommenderController2">
    <children>
       <Label layoutX="143.0" layoutY="14.0" prefHeight="31.0" prefWidth="314.0" text="Please rate their specific interests :)" textAlignment="CENTER">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="label1" layoutX="36.0" layoutY="45.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
-      <Slider layoutX="36.0" layoutY="79.0" majorTickUnit="10.0" max="10.0" minorTickCount="20" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
-      <Label fx:id="label2" layoutX="36.0" layoutY="130.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
-      <Slider layoutX="36.0" layoutY="174.0" majorTickUnit="10.0" max="10.0" minorTickCount="10" prefHeight="21.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
-      <Slider layoutX="36.0" layoutY="244.0" majorTickUnit="10.0" max="10.0" minorTickCount="20" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
-      <Label fx:id="label3" layoutX="36.0" layoutY="210.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
-      <Slider layoutX="36.0" layoutY="329.0" majorTickUnit="10.0" max="10.0" minorTickCount="20" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
-      <Label fx:id="label4" layoutX="36.0" layoutY="295.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
-      <Slider layoutX="36.0" layoutY="419.0" majorTickUnit="10.0" max="10.0" minorTickCount="20" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
-      <Label fx:id="label5" layoutX="36.0" layoutY="380.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
-      <Slider layoutX="362.0" layoutY="79.0" majorTickUnit="10.0" max="10.0" minorTickCount="20" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
-      <Label fx:id="label6" layoutX="362.0" layoutY="45.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
-      <Slider layoutX="362.0" layoutY="159.0" majorTickUnit="10.0" max="10.0" minorTickCount="20" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
-      <Label fx:id="label7" layoutX="362.0" layoutY="130.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
-      <Slider layoutX="362.0" layoutY="244.0" majorTickUnit="10.0" max="10.0" minorTickCount="20" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
-      <Label fx:id="label8" layoutX="362.0" layoutY="210.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
-      <Slider layoutX="362.0" layoutY="329.0" majorTickUnit="10.0" max="10.0" minorTickCount="20" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
-      <Label fx:id="label9" layoutX="362.0" layoutY="295.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
-      <Slider layoutX="362.0" layoutY="419.0" majorTickUnit="10.0" max="10.0" minorTickCount="20" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
-      <Label fx:id="label10" layoutX="362.0" layoutY="380.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
+      <Label fx:id="interest1" layoutX="36.0" layoutY="45.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
+      <Slider fx:id="interestValue1" layoutX="36.0" layoutY="79.0" majorTickUnit="10.0" max="10.0" minorTickCount="9" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
+      <Label fx:id="interest2" layoutX="36.0" layoutY="130.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
+      <Slider fx:id="interestValue2" layoutX="36.0" layoutY="174.0" majorTickUnit="10.0" max="10.0" minorTickCount="9" prefHeight="21.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="interestValue3" layoutX="36.0" layoutY="244.0" majorTickUnit="10.0" max="10.0" minorTickCount="9" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
+      <Label fx:id="interest3" layoutX="36.0" layoutY="210.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
+      <Slider fx:id="interestValue4" layoutX="36.0" layoutY="329.0" majorTickUnit="10.0" max="10.0" minorTickCount="9" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
+      <Label fx:id="interest4" layoutX="36.0" layoutY="295.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
+      <Slider fx:id="interestValue5" layoutX="36.0" layoutY="419.0" majorTickUnit="10.0" max="10.0" minorTickCount="9" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
+      <Label fx:id="interest5" layoutX="36.0" layoutY="380.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
+      <Slider fx:id="interestValue6" layoutX="362.0" layoutY="79.0" majorTickUnit="10.0" max="10.0" minorTickCount="9" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
+      <Label fx:id="interest6" layoutX="362.0" layoutY="45.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
+      <Slider fx:id="interestValue7" layoutX="362.0" layoutY="159.0" majorTickUnit="10.0" max="10.0" minorTickCount="9" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
+      <Label fx:id="interest7" layoutX="362.0" layoutY="130.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
+      <Slider fx:id="interestValue8" layoutX="362.0" layoutY="244.0" majorTickUnit="10.0" max="10.0" minorTickCount="9" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
+      <Label fx:id="interest8" layoutX="362.0" layoutY="210.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
+      <Slider fx:id="interestValue9" layoutX="362.0" layoutY="329.0" majorTickUnit="10.0" max="10.0" minorTickCount="9" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
+      <Label fx:id="interest9" layoutX="362.0" layoutY="295.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
+      <Slider fx:id="interestValue10" layoutX="362.0" layoutY="419.0" majorTickUnit="10.0" max="10.0" minorTickCount="9" prefHeight="51.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" />
+      <Label fx:id="interest10" layoutX="362.0" layoutY="380.0" prefHeight="27.0" prefWidth="165.0" text="Label" />
       <Button layoutY="485.0" mnemonicParsing="false" onAction="#nextStep2" prefHeight="51.0" prefWidth="600.0" text="Next Step">
          <font>
             <Font name="Times New Roman Bold" size="19.0" />
