@@ -14,7 +14,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws Exception{
 		
 		FXMLLoader loader = new FXMLLoader();
-		Parent root = loader.load(new FileInputStream("src/application/newscene1.fxml"));
+		Parent root = loader.load(new FileInputStream("src/application/scene1.fxml"));
 		GiftRecommenderController controller = (GiftRecommenderController)loader.getController();
 		Scene scene = new Scene(root, 400, 400);
 		primaryStage.setTitle("Gift Recommender");
