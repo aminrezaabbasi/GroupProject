@@ -83,30 +83,40 @@ public class GiftRecommenderController2 {
     public void setUser(Person person) {
     	user = person;
     	interest1.setText(user.getInterests().get(0).getName());
+    	interest2.setText(user.getInterests().get(1).getName());
+    	interest3.setText(user.getInterests().get(2).getName());
+    	interest4.setText(user.getInterests().get(3).getName());
+    	interest5.setText(user.getInterests().get(4).getName());
+    	interest6.setText(user.getInterests().get(5).getName());
+    	interest7.setText(user.getInterests().get(6).getName());
+    	interest8.setText(user.getInterests().get(7).getName());
+    	interest9.setText(user.getInterests().get(8).getName());
+    	interest10.setText(user.getInterests().get(9).getName());
     }
     
     
     @FXML 
     public void nextStep2(ActionEvent event2) throws IOException {
+    	// Set user interest ratings from slider values
+    	user.getInterests().get(0).setRating(interestValue1.getValue());
+    	user.getInterests().get(1).setRating(interestValue2.getValue());
+    	user.getInterests().get(2).setRating(interestValue3.getValue());
+    	user.getInterests().get(3).setRating(interestValue4.getValue());
+    	user.getInterests().get(4).setRating(interestValue5.getValue());
+    	user.getInterests().get(5).setRating(interestValue6.getValue());
+    	user.getInterests().get(6).setRating(interestValue7.getValue());
+    	user.getInterests().get(7).setRating(interestValue8.getValue());
+    	user.getInterests().get(8).setRating(interestValue9.getValue());
+    	user.getInterests().get(9).setRating(interestValue10.getValue());
     	
     	FXMLLoader loader = new FXMLLoader();
 		Parent root = loader.load(new FileInputStream("src/application/scene3.fxml"));
 		GiftRecommenderController3 controller = (GiftRecommenderController3)loader.getController();
-		controller.setUser(user);
+		controller.getGift(user);
     	primaryStage = (Stage)((Node)event2.getSource()).getScene().getWindow();
     	scene = new Scene(root);
     	primaryStage.setScene(scene);
     	primaryStage.show();
     	
-
-    	
-    	//interests.get(0).setRating(interestValue1.getValue());
-    	
-    	//interestValue1.getValue();
-    	//Parent root2 = FXMLLoader.load(getClass().getResource("scene3.fxml"));
-    	//primaryStage = (Stage)((Node)event2.getSource()).getScene().getWindow();
-    	//scene = new Scene(root2);
-    	//primaryStage.setScene(scene);
-    	//primaryStage.show();
    	}
 }

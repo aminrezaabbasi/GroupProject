@@ -90,7 +90,7 @@ public class Gift {
 	 * Returns gift name and price formatted as string
 	 */
 	public String toString() {
-		return "Gift: " + name + "\tCost: $" + price;
+		return "Gift: " + name + "\nCost: $" + price;
 	}
 	
 	/**
