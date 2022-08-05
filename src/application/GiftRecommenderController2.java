@@ -14,6 +14,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.stage.Stage;
 
+/**
+ * GiftRecommenderController2 sets and gets input from interest sliders on the second page. It also changes
+ * the scene to the final gift display window.
+ *
+ */
 public class GiftRecommenderController2 {
 	private Person user;
 	private Stage primaryStage;
@@ -80,6 +85,12 @@ public class GiftRecommenderController2 {
     private Slider interestValue10;
     
     
+    /**
+     * This method sets the labels on the second page based on the user interests (which vary for users of different
+     * ages).
+     * 
+     * @param person the user
+     */
     public void setUser(Person person) {
     	user = person;
     	interest1.setText(user.getInterests().get(0).getName());
@@ -94,7 +105,13 @@ public class GiftRecommenderController2 {
     	interest10.setText(user.getInterests().get(9).getName());
     }
     
-    
+    /**
+     * Sets the scene to the final page where the recommended gift will be displayed. Gets the values stored
+     * in interest sliders to determine which gift to select for user.
+     * 
+     * @param event2 the next page button
+     * @throws IOException
+     */
     @FXML 
     public void nextStep2(ActionEvent event2) throws IOException {
     	// Set user interest ratings from slider values

@@ -38,8 +38,6 @@ import javafx.stage.Stage;
 	    @FXML
 	    private TextField ageTextField;
 	    
-	    @FXML
-	    private AnchorPane rootPane;
 	    
 	    @FXML
 	    private Label ageGuide;
@@ -82,7 +80,7 @@ import javafx.stage.Stage;
 	    	    }
 
 		    	FXMLLoader loader = new FXMLLoader();
-				Parent root = loader.load(new FileInputStream("src/application/newscene2neww.fxml"));
+				Parent root = loader.load(new FileInputStream("src/application/scene2.fxml"));
 				GiftRecommenderController2 controller = (GiftRecommenderController2)loader.getController();
 				controller.setUser(user);
 		    	primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
