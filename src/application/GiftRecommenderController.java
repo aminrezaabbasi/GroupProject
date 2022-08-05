@@ -20,6 +20,9 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 	import javafx.scene.Node;
 
+	/**
+	 * This controller class changes the scene and helps the validation user's input. And It creates the person.
+	 */
 	public class GiftRecommenderController {
 		private Person user;
 		
@@ -45,6 +48,13 @@ import javafx.stage.Stage;
 	    private Label priceGuide;
 	    
 	    
+	    /**
+	     * This method will changes the scene (from the fist window to the second window), and It will store the user's inputs.
+	     * it helps the validation user's input by changing the guidelines to red in response to an incorrect input by user.
+	     * Furthermore, it will create an object for Adult class and Child class. 
+	     * @param event
+	     * @throws IOException
+	     */
 	    @FXML
 	    public void nextStep(ActionEvent event) throws IOException {
 	    	
@@ -52,6 +62,7 @@ import javafx.stage.Stage;
 	    	priceGuide.setTextFill(Color.BLACK);
 	    	NumericInput ageInput = new NumericInput(ageTextField.getText(), 1);
 	    	NumericInput priceInput = new NumericInput(maxPriceTextField.getText(), 10, 2000);
+	    	
 	    	
 	    	if (!ageInput.inputIsValid()) {
 	    		ageGuide.setTextFill(Color.RED);
@@ -61,15 +72,14 @@ import javafx.stage.Stage;
 	    		priceGuide.setTextFill(Color.RED);
 	    	}
 	    	
-	    	
 	    	if (priceInput.inputIsValid() && ageInput.inputIsValid() ) {
 	    	
-	    	if (ageInput.getValue() < 12) { 
-	    		user = new Child(ageInput.getValue(), priceInput.getValue(), genderChoiceBox.getValue());
-	    	}
-	    	else {
-	    		user = new Adult(ageInput.getValue(), priceInput.getValue(), genderChoiceBox.getValue());
-	    	     }
+	    		if (ageInput.getValue() < 12) { 
+	    			user = new Child(ageInput.getValue(), priceInput.getValue(), genderChoiceBox.getValue());
+	    		}
+	    		else {
+	    			user = new Adult(ageInput.getValue(), priceInput.getValue(), genderChoiceBox.getValue());
+	    	    }
 
 		    	FXMLLoader loader = new FXMLLoader();
 				Parent root = loader.load(new FileInputStream("src/application/newscene2neww.fxml"));
@@ -81,8 +91,11 @@ import javafx.stage.Stage;
 		    	primaryStage.show();
 		   
 		    	// I used this YouTube video for implementing
-		    	// How can I use 2 FXML file for changing the scene.
+		    	// How can I use multiple FXML files for changing the scene.
 		    	//https://www.youtube.com/watch?v=hcM-R-YOKkQ&t=319s
+		    	
+		    	// The teaching team (including instructor and TA) helped us to figured out how we can
+		    	// change the scene and have multiple fxml files and multiple constructors classes..
 	       }
 	    }
 	    

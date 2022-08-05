@@ -8,7 +8,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 
-
+/**
+ * The main class will generate the first scene and it allows user to provide inputs.
+ * That would be used for generating a gift.
+ */
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception{
