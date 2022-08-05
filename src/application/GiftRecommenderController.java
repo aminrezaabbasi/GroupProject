@@ -16,7 +16,8 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 	import javafx.scene.layout.AnchorPane;
 	import javafx.scene.layout.VBox;
-	import javafx.stage.Stage;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 	import javafx.scene.Node;
 
 	public class GiftRecommenderController {
@@ -37,40 +38,52 @@ import javafx.scene.control.TextField;
 	    @FXML
 	    private AnchorPane rootPane;
 	    
+	    @FXML
+	    private Label ageGuide;
+	    
+	    @FXML
+	    private Label priceGuide;
 	    
 	    
 	    @FXML
 	    public void nextStep(ActionEvent event) throws IOException {
 	    	
-	    	String genderInput = genderChoiceBox.getValue();
-	    	System.out.println(genderInput) ;
+	    	ageGuide.setTextFill(Color.BLACK);
+	    	priceGuide.setTextFill(Color.BLACK);
+	    	NumericInput ageInput = new NumericInput(ageTextField.getText(), 1);
+	    	NumericInput priceInput = new NumericInput(maxPriceTextField.getText(), 10, 2000);
 	    	
-	    	String ageInput = ageTextField.getText();
-	    	System.out.println(ageInput);
+	    	if (!ageInput.inputIsValid()) {
+	    		ageGuide.setTextFill(Color.RED);
+	    	}
 	    	
-	    	String maxPriceInput = maxPriceTextField.getText();
-	    	System.out.println(maxPriceInput);
+	    	if(!priceInput.inputIsValid()) {
+	    		priceGuide.setTextFill(Color.RED);
+	    	}
 	    	
-	    	int age = Integer.parseInt(ageTextField.getText());
 	    	
-	    	if (age < 12)
-	    		user = new Child(age, Integer.parseInt(maxPriceTextField.getText()), genderChoiceBox.getValue());
-	    	else
-	    		user = new Adult(age, Integer.parseInt(maxPriceTextField.getText()), genderChoiceBox.getValue());
+	    	if (priceInput.inputIsValid() && ageInput.inputIsValid() ) {
 	    	
+	    	if (ageInput.getValue() < 12) { 
+	    		user = new Child(ageInput.getValue(), priceInput.getValue(), genderChoiceBox.getValue());
+	    	}
+	    	else {
+	    		user = new Adult(ageInput.getValue(), priceInput.getValue(), genderChoiceBox.getValue());
+	    	     }
 
-	    	FXMLLoader loader = new FXMLLoader();
-			Parent root = loader.load(new FileInputStream("src/application/newscene2neww.fxml"));
-			GiftRecommenderController2 controller = (GiftRecommenderController2)loader.getController();
-			controller.setUser(user);
-	    	primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	    	scene = new Scene(root);
-	    	primaryStage.setScene(scene);
-	    	primaryStage.show();
-	     
-	    	// I used this YouTube video for implementing
-	    	// How can I use 2 FXML file for changing the scene.
-	    	//https://www.youtube.com/watch?v=hcM-R-YOKkQ&t=319s
+		    	FXMLLoader loader = new FXMLLoader();
+				Parent root = loader.load(new FileInputStream("src/application/newscene2neww.fxml"));
+				GiftRecommenderController2 controller = (GiftRecommenderController2)loader.getController();
+				controller.setUser(user);
+		    	primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		    	scene = new Scene(root);
+		    	primaryStage.setScene(scene);
+		    	primaryStage.show();
+		   
+		    	// I used this YouTube video for implementing
+		    	// How can I use 2 FXML file for changing the scene.
+		    	//https://www.youtube.com/watch?v=hcM-R-YOKkQ&t=319s
+	       }
 	    }
 	    
 	 }
